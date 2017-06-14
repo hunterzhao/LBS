@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../lib/liblbs_framework.a  CMakeFiles/lbs_framework.dir/lbsserver.cpp.o CMakeFiles/lbs_framework.dir/task.cpp.o CMakeFiles/lbs_framework.dir/clientinfo.cpp.o CMakeFiles/lbs_framework.dir/until.cpp.o
+/usr/bin/ranlib ../../lib/liblbs_framework.a

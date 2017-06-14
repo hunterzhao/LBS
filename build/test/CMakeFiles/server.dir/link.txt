@@ -1,0 +1,1 @@
+/usr/bin/c++    -g -pthread -std=c++11 -Wall -O0   CMakeFiles/server.dir/server.cpp.o  -o ../../bin/server  -L/mnt/hgfs/workstation/LBS-2/lib -rdynamic ../../lib/liblbs_framework.a -Wl,-rpath,/mnt/hgfs/workstation/LBS-2/lib 

@@ -1,0 +1,10 @@
+/mnt/hgfs/workstation/LBS-2/build/CMakeFiles/edit_cache.dir
+/mnt/hgfs/workstation/LBS-2/build/CMakeFiles/rebuild_cache.dir
+/mnt/hgfs/workstation/LBS-2/build/src/CMakeFiles/rebuild_cache.dir
+/mnt/hgfs/workstation/LBS-2/build/src/CMakeFiles/lbs_framework_so.dir
+/mnt/hgfs/workstation/LBS-2/build/src/CMakeFiles/edit_cache.dir
+/mnt/hgfs/workstation/LBS-2/build/src/CMakeFiles/lbs_framework.dir
+/mnt/hgfs/workstation/LBS-2/build/test/CMakeFiles/rebuild_cache.dir
+/mnt/hgfs/workstation/LBS-2/build/test/CMakeFiles/edit_cache.dir
+/mnt/hgfs/workstation/LBS-2/build/test/CMakeFiles/client.dir
+/mnt/hgfs/workstation/LBS-2/build/test/CMakeFiles/server.dir

@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC  -g -pthread -std=c++11 -Wall -O0  -shared -Wl,-soname,liblbs_framework.so -o ../../lib/liblbs_framework.so CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.o CMakeFiles/lbs_framework_so.dir/task.cpp.o CMakeFiles/lbs_framework_so.dir/clientinfo.cpp.o CMakeFiles/lbs_framework_so.dir/until.cpp.o  -L/mnt/hgfs/workstation/LBS-2/lib 
