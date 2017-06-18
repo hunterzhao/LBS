@@ -6,11 +6,17 @@ src/CMakeFiles/lbs_framework_so.dir/clientinfo.cpp.o: ../include/until.h
 src/CMakeFiles/lbs_framework_so.dir/clientinfo.cpp.o: ../src/clientinfo.cpp
 
 src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.o: ../include/lbsserver.h
+src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.o: ../include/nocopy.h
 src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.o: ../include/task.h
 src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.o: ../include/threadpool.h
 src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.o: ../include/until.h
 src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.o: ../src/lbsserver.cpp
 
+src/CMakeFiles/lbs_framework_so.dir/message.pb.cc.o: ../include/message.pb.h
+src/CMakeFiles/lbs_framework_so.dir/message.pb.cc.o: ../src/message.pb.cc
+
+src/CMakeFiles/lbs_framework_so.dir/task.cpp.o: ../include/geointerface.h
+src/CMakeFiles/lbs_framework_so.dir/task.cpp.o: ../include/message.pb.h
 src/CMakeFiles/lbs_framework_so.dir/task.cpp.o: ../include/task.h
 src/CMakeFiles/lbs_framework_so.dir/task.cpp.o: ../include/until.h
 src/CMakeFiles/lbs_framework_so.dir/task.cpp.o: ../src/task.cpp

@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package lbs;
+
+message AddReqProto {
+	double x = 3;
+	double y = 4;
+}
+
+message SearchReqProto {
+	double x = 3;
+	double y = 4;
+	double redius = 5;
+}
+
+message ReqProto {
+    int32 type = 1;
+    int32 id   = 2;
+
+    AddReqProto    addreq = 3;
+    SearchReqProto searchreq = 4;
+}
+
+message AddResProto {
+
+}
+    
+message NearFriend {
+	int32 id = 1;
+	double dist = 2;
+	double x = 3;
+	double y = 4;
+}
+
+message SearchResProto {
+	repeated NearFriend friends = 1;
+}
+
+message ResProto {
+    int32 type = 1;
+    int32 id = 2;
+    int32 code = 3;
+
+    AddResProto    addres = 4;
+    SearchResProto searchres = 5;
+}
+
+

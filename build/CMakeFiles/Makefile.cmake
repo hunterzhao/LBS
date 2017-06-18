@@ -11,6 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.5.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeSystem.cmake"
+  "../geo/CMakeLists.txt"
   "../src/CMakeLists.txt"
   "../test/CMakeLists.txt"
   "/usr/share/cmake-3.5/Modules/CMakeCInformation.cmake"
@@ -39,12 +40,15 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "geo/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "geo/CMakeFiles/geo_so.dir/DependInfo.cmake"
+  "geo/CMakeFiles/geo.dir/DependInfo.cmake"
   "src/CMakeFiles/lbs_framework_so.dir/DependInfo.cmake"
   "src/CMakeFiles/lbs_framework.dir/DependInfo.cmake"
   "test/CMakeFiles/client.dir/DependInfo.cmake"

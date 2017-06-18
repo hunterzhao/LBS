@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/hgfs/workstation/LBS-2
+CMAKE_SOURCE_DIR = /mnt/hgfs/workstation/LBS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/hgfs/workstation/LBS-2/build
+CMAKE_BINARY_DIR = /mnt/hgfs/workstation/LBS/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /mnt/hgfs/workstation/LBS-2/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/workstation/LBS-2/build/CMakeFiles /mnt/hgfs/workstation/LBS-2/build/src/CMakeFiles/progress.marks
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/workstation/LBS-2/build/CMakeFiles 0
+	cd /mnt/hgfs/workstation/LBS/build && $(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/workstation/LBS/build/CMakeFiles /mnt/hgfs/workstation/LBS/build/src/CMakeFiles/progress.marks
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/workstation/LBS/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /mnt/hgfs/workstation/LBS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/lbs_framework_so.dir/rule:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/lbs_framework_so.dir/rule
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/lbs_framework_so.dir/rule
 .PHONY : src/CMakeFiles/lbs_framework_so.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ lbs_framework_so: src/CMakeFiles/lbs_framework_so.dir/rule
 
 # fast build rule for target.
 lbs_framework_so/fast:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/build
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/build
 .PHONY : lbs_framework_so/fast
 
 # Convenience name for target.
 src/CMakeFiles/lbs_framework.dir/rule:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/lbs_framework.dir/rule
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/lbs_framework.dir/rule
 .PHONY : src/CMakeFiles/lbs_framework.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ lbs_framework: src/CMakeFiles/lbs_framework.dir/rule
 
 # fast build rule for target.
 lbs_framework/fast:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/build
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/build
 .PHONY : lbs_framework/fast
 
 clientinfo.o: clientinfo.cpp.o
@@ -146,8 +146,8 @@ clientinfo.o: clientinfo.cpp.o
 
 # target to build an object file
 clientinfo.cpp.o:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/clientinfo.cpp.o
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/clientinfo.cpp.o
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/clientinfo.cpp.o
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/clientinfo.cpp.o
 .PHONY : clientinfo.cpp.o
 
 clientinfo.i: clientinfo.cpp.i
@@ -156,8 +156,8 @@ clientinfo.i: clientinfo.cpp.i
 
 # target to preprocess a source file
 clientinfo.cpp.i:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/clientinfo.cpp.i
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/clientinfo.cpp.i
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/clientinfo.cpp.i
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/clientinfo.cpp.i
 .PHONY : clientinfo.cpp.i
 
 clientinfo.s: clientinfo.cpp.s
@@ -166,8 +166,8 @@ clientinfo.s: clientinfo.cpp.s
 
 # target to generate assembly for a file
 clientinfo.cpp.s:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/clientinfo.cpp.s
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/clientinfo.cpp.s
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/clientinfo.cpp.s
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/clientinfo.cpp.s
 .PHONY : clientinfo.cpp.s
 
 lbsserver.o: lbsserver.cpp.o
@@ -176,8 +176,8 @@ lbsserver.o: lbsserver.cpp.o
 
 # target to build an object file
 lbsserver.cpp.o:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.o
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/lbsserver.cpp.o
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.o
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/lbsserver.cpp.o
 .PHONY : lbsserver.cpp.o
 
 lbsserver.i: lbsserver.cpp.i
@@ -186,8 +186,8 @@ lbsserver.i: lbsserver.cpp.i
 
 # target to preprocess a source file
 lbsserver.cpp.i:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.i
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/lbsserver.cpp.i
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.i
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/lbsserver.cpp.i
 .PHONY : lbsserver.cpp.i
 
 lbsserver.s: lbsserver.cpp.s
@@ -196,9 +196,39 @@ lbsserver.s: lbsserver.cpp.s
 
 # target to generate assembly for a file
 lbsserver.cpp.s:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.s
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/lbsserver.cpp.s
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/lbsserver.cpp.s
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/lbsserver.cpp.s
 .PHONY : lbsserver.cpp.s
+
+message.pb.o: message.pb.cc.o
+
+.PHONY : message.pb.o
+
+# target to build an object file
+message.pb.cc.o:
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/message.pb.cc.o
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/message.pb.cc.o
+.PHONY : message.pb.cc.o
+
+message.pb.i: message.pb.cc.i
+
+.PHONY : message.pb.i
+
+# target to preprocess a source file
+message.pb.cc.i:
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/message.pb.cc.i
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/message.pb.cc.i
+.PHONY : message.pb.cc.i
+
+message.pb.s: message.pb.cc.s
+
+.PHONY : message.pb.s
+
+# target to generate assembly for a file
+message.pb.cc.s:
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/message.pb.cc.s
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/message.pb.cc.s
+.PHONY : message.pb.cc.s
 
 task.o: task.cpp.o
 
@@ -206,8 +236,8 @@ task.o: task.cpp.o
 
 # target to build an object file
 task.cpp.o:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/task.cpp.o
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/task.cpp.o
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/task.cpp.o
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/task.cpp.o
 .PHONY : task.cpp.o
 
 task.i: task.cpp.i
@@ -216,8 +246,8 @@ task.i: task.cpp.i
 
 # target to preprocess a source file
 task.cpp.i:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/task.cpp.i
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/task.cpp.i
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/task.cpp.i
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/task.cpp.i
 .PHONY : task.cpp.i
 
 task.s: task.cpp.s
@@ -226,8 +256,8 @@ task.s: task.cpp.s
 
 # target to generate assembly for a file
 task.cpp.s:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/task.cpp.s
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/task.cpp.s
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/task.cpp.s
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/task.cpp.s
 .PHONY : task.cpp.s
 
 until.o: until.cpp.o
@@ -236,8 +266,8 @@ until.o: until.cpp.o
 
 # target to build an object file
 until.cpp.o:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/until.cpp.o
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/until.cpp.o
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/until.cpp.o
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/until.cpp.o
 .PHONY : until.cpp.o
 
 until.i: until.cpp.i
@@ -246,8 +276,8 @@ until.i: until.cpp.i
 
 # target to preprocess a source file
 until.cpp.i:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/until.cpp.i
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/until.cpp.i
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/until.cpp.i
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/until.cpp.i
 .PHONY : until.cpp.i
 
 until.s: until.cpp.s
@@ -256,8 +286,8 @@ until.s: until.cpp.s
 
 # target to generate assembly for a file
 until.cpp.s:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/until.cpp.s
-	cd /mnt/hgfs/workstation/LBS-2/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/until.cpp.s
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework_so.dir/build.make src/CMakeFiles/lbs_framework_so.dir/until.cpp.s
+	cd /mnt/hgfs/workstation/LBS/build && $(MAKE) -f src/CMakeFiles/lbs_framework.dir/build.make src/CMakeFiles/lbs_framework.dir/until.cpp.s
 .PHONY : until.cpp.s
 
 # Help Target
@@ -276,6 +306,9 @@ help:
 	@echo "... lbsserver.o"
 	@echo "... lbsserver.i"
 	@echo "... lbsserver.s"
+	@echo "... message.pb.o"
+	@echo "... message.pb.i"
+	@echo "... message.pb.s"
 	@echo "... task.o"
 	@echo "... task.i"
 	@echo "... task.s"
@@ -293,6 +326,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /mnt/hgfs/workstation/LBS/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -1,4 +1,4 @@
-# Install script for directory: /mnt/hgfs/workstation/LBS-2/test
+# Install script for directory: /mnt/hgfs/workstation/LBS/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

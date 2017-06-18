@@ -4,10 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/hgfs/workstation/LBS-2/src/clientinfo.cpp" "/mnt/hgfs/workstation/LBS-2/build/src/CMakeFiles/lbs_framework.dir/clientinfo.cpp.o"
-  "/mnt/hgfs/workstation/LBS-2/src/lbsserver.cpp" "/mnt/hgfs/workstation/LBS-2/build/src/CMakeFiles/lbs_framework.dir/lbsserver.cpp.o"
-  "/mnt/hgfs/workstation/LBS-2/src/task.cpp" "/mnt/hgfs/workstation/LBS-2/build/src/CMakeFiles/lbs_framework.dir/task.cpp.o"
-  "/mnt/hgfs/workstation/LBS-2/src/until.cpp" "/mnt/hgfs/workstation/LBS-2/build/src/CMakeFiles/lbs_framework.dir/until.cpp.o"
+  "/mnt/hgfs/workstation/LBS/src/clientinfo.cpp" "/mnt/hgfs/workstation/LBS/build/src/CMakeFiles/lbs_framework.dir/clientinfo.cpp.o"
+  "/mnt/hgfs/workstation/LBS/src/lbsserver.cpp" "/mnt/hgfs/workstation/LBS/build/src/CMakeFiles/lbs_framework.dir/lbsserver.cpp.o"
+  "/mnt/hgfs/workstation/LBS/src/message.pb.cc" "/mnt/hgfs/workstation/LBS/build/src/CMakeFiles/lbs_framework.dir/message.pb.cc.o"
+  "/mnt/hgfs/workstation/LBS/src/task.cpp" "/mnt/hgfs/workstation/LBS/build/src/CMakeFiles/lbs_framework.dir/task.cpp.o"
+  "/mnt/hgfs/workstation/LBS/src/until.cpp" "/mnt/hgfs/workstation/LBS/build/src/CMakeFiles/lbs_framework.dir/until.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

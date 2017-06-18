@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/mnt/hgfs/workstation/LBS-2/test/client.cpp" "/mnt/hgfs/workstation/LBS-2/build/test/CMakeFiles/client.dir/client.cpp.o"
+  "/mnt/hgfs/workstation/LBS/test/client.cpp" "/mnt/hgfs/workstation/LBS/build/test/CMakeFiles/client.dir/client.cpp.o"
+  "/mnt/hgfs/workstation/LBS/test/message.pb.cc" "/mnt/hgfs/workstation/LBS/build/test/CMakeFiles/client.dir/message.pb.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

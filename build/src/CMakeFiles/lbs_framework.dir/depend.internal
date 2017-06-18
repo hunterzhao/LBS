@@ -4,17 +4,23 @@
 src/CMakeFiles/lbs_framework.dir/clientinfo.cpp.o
  ../include/clientinfo.h
  ../include/until.h
- /mnt/hgfs/workstation/LBS-2/src/clientinfo.cpp
+ /mnt/hgfs/workstation/LBS/src/clientinfo.cpp
 src/CMakeFiles/lbs_framework.dir/lbsserver.cpp.o
  ../include/lbsserver.h
+ ../include/nocopy.h
  ../include/task.h
  ../include/threadpool.h
  ../include/until.h
- /mnt/hgfs/workstation/LBS-2/src/lbsserver.cpp
+ /mnt/hgfs/workstation/LBS/src/lbsserver.cpp
+src/CMakeFiles/lbs_framework.dir/message.pb.cc.o
+ ../include/message.pb.h
+ /mnt/hgfs/workstation/LBS/src/message.pb.cc
 src/CMakeFiles/lbs_framework.dir/task.cpp.o
+ ../include/geointerface.h
+ ../include/message.pb.h
  ../include/task.h
  ../include/until.h
- /mnt/hgfs/workstation/LBS-2/src/task.cpp
+ /mnt/hgfs/workstation/LBS/src/task.cpp
 src/CMakeFiles/lbs_framework.dir/until.cpp.o
  ../include/until.h
- /mnt/hgfs/workstation/LBS-2/src/until.cpp
+ /mnt/hgfs/workstation/LBS/src/until.cpp

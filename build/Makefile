@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/hgfs/workstation/LBS-2
+CMAKE_SOURCE_DIR = /mnt/hgfs/workstation/LBS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/hgfs/workstation/LBS-2/build
+CMAKE_BINARY_DIR = /mnt/hgfs/workstation/LBS/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/workstation/LBS-2/build/CMakeFiles /mnt/hgfs/workstation/LBS-2/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/workstation/LBS/build/CMakeFiles /mnt/hgfs/workstation/LBS/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/workstation/LBS-2/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /mnt/hgfs/workstation/LBS/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,6 +109,32 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named geo_so
+
+# Build rule for target.
+geo_so: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geo_so
+.PHONY : geo_so
+
+# fast build rule for target.
+geo_so/fast:
+	$(MAKE) -f geo/CMakeFiles/geo_so.dir/build.make geo/CMakeFiles/geo_so.dir/build
+.PHONY : geo_so/fast
+
+#=============================================================================
+# Target rules for targets named geo
+
+# Build rule for target.
+geo: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geo
+.PHONY : geo
+
+# fast build rule for target.
+geo/fast:
+	$(MAKE) -f geo/CMakeFiles/geo.dir/build.make geo/CMakeFiles/geo.dir/build
+.PHONY : geo/fast
 
 #=============================================================================
 # Target rules for targets named lbs_framework_so
@@ -170,6 +196,8 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... geo_so"
+	@echo "... geo"
 	@echo "... lbs_framework_so"
 	@echo "... lbs_framework"
 	@echo "... client"

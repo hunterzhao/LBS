@@ -6,5 +6,5 @@ CXX_FLAGS =  -g -pthread -std=c++11 -Wall -O0 -fPIC
 
 CXX_DEFINES = -Dlbs_framework_so_EXPORTS
 
-CXX_INCLUDES = -I/mnt/hgfs/workstation/LBS-2/include 
+CXX_INCLUDES = -I/mnt/hgfs/workstation/LBS/include 
 

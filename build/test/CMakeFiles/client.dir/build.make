@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /mnt/hgfs/workstation/LBS-2
+CMAKE_SOURCE_DIR = /mnt/hgfs/workstation/LBS
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /mnt/hgfs/workstation/LBS-2/build
+CMAKE_BINARY_DIR = /mnt/hgfs/workstation/LBS/build
 
 # Include any dependencies generated for this target.
 include test/CMakeFiles/client.dir/depend.make
@@ -59,16 +59,16 @@ include test/CMakeFiles/client.dir/flags.make
 
 test/CMakeFiles/client.dir/client.cpp.o: test/CMakeFiles/client.dir/flags.make
 test/CMakeFiles/client.dir/client.cpp.o: ../test/client.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/workstation/LBS-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/client.dir/client.cpp.o"
-	cd /mnt/hgfs/workstation/LBS-2/build/test && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/client.cpp.o -c /mnt/hgfs/workstation/LBS-2/test/client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/workstation/LBS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/CMakeFiles/client.dir/client.cpp.o"
+	cd /mnt/hgfs/workstation/LBS/build/test && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/client.cpp.o -c /mnt/hgfs/workstation/LBS/test/client.cpp
 
 test/CMakeFiles/client.dir/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/client.cpp.i"
-	cd /mnt/hgfs/workstation/LBS-2/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hgfs/workstation/LBS-2/test/client.cpp > CMakeFiles/client.dir/client.cpp.i
+	cd /mnt/hgfs/workstation/LBS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hgfs/workstation/LBS/test/client.cpp > CMakeFiles/client.dir/client.cpp.i
 
 test/CMakeFiles/client.dir/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/client.cpp.s"
-	cd /mnt/hgfs/workstation/LBS-2/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hgfs/workstation/LBS-2/test/client.cpp -o CMakeFiles/client.dir/client.cpp.s
+	cd /mnt/hgfs/workstation/LBS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hgfs/workstation/LBS/test/client.cpp -o CMakeFiles/client.dir/client.cpp.s
 
 test/CMakeFiles/client.dir/client.cpp.o.requires:
 
@@ -81,18 +81,44 @@ test/CMakeFiles/client.dir/client.cpp.o.provides: test/CMakeFiles/client.dir/cli
 test/CMakeFiles/client.dir/client.cpp.o.provides.build: test/CMakeFiles/client.dir/client.cpp.o
 
 
+test/CMakeFiles/client.dir/message.pb.cc.o: test/CMakeFiles/client.dir/flags.make
+test/CMakeFiles/client.dir/message.pb.cc.o: ../test/message.pb.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/hgfs/workstation/LBS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/CMakeFiles/client.dir/message.pb.cc.o"
+	cd /mnt/hgfs/workstation/LBS/build/test && /usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client.dir/message.pb.cc.o -c /mnt/hgfs/workstation/LBS/test/message.pb.cc
+
+test/CMakeFiles/client.dir/message.pb.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client.dir/message.pb.cc.i"
+	cd /mnt/hgfs/workstation/LBS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/hgfs/workstation/LBS/test/message.pb.cc > CMakeFiles/client.dir/message.pb.cc.i
+
+test/CMakeFiles/client.dir/message.pb.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client.dir/message.pb.cc.s"
+	cd /mnt/hgfs/workstation/LBS/build/test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/hgfs/workstation/LBS/test/message.pb.cc -o CMakeFiles/client.dir/message.pb.cc.s
+
+test/CMakeFiles/client.dir/message.pb.cc.o.requires:
+
+.PHONY : test/CMakeFiles/client.dir/message.pb.cc.o.requires
+
+test/CMakeFiles/client.dir/message.pb.cc.o.provides: test/CMakeFiles/client.dir/message.pb.cc.o.requires
+	$(MAKE) -f test/CMakeFiles/client.dir/build.make test/CMakeFiles/client.dir/message.pb.cc.o.provides.build
+.PHONY : test/CMakeFiles/client.dir/message.pb.cc.o.provides
+
+test/CMakeFiles/client.dir/message.pb.cc.o.provides.build: test/CMakeFiles/client.dir/message.pb.cc.o
+
+
 # Object files for target client
 client_OBJECTS = \
-"CMakeFiles/client.dir/client.cpp.o"
+"CMakeFiles/client.dir/client.cpp.o" \
+"CMakeFiles/client.dir/message.pb.cc.o"
 
 # External object files for target client
 client_EXTERNAL_OBJECTS =
 
 ../bin/client: test/CMakeFiles/client.dir/client.cpp.o
+../bin/client: test/CMakeFiles/client.dir/message.pb.cc.o
 ../bin/client: test/CMakeFiles/client.dir/build.make
 ../bin/client: test/CMakeFiles/client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/hgfs/workstation/LBS-2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable ../../bin/client"
-	cd /mnt/hgfs/workstation/LBS-2/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/hgfs/workstation/LBS/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable ../../bin/client"
+	cd /mnt/hgfs/workstation/LBS/build/test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/CMakeFiles/client.dir/build: ../bin/client
@@ -100,14 +126,15 @@ test/CMakeFiles/client.dir/build: ../bin/client
 .PHONY : test/CMakeFiles/client.dir/build
 
 test/CMakeFiles/client.dir/requires: test/CMakeFiles/client.dir/client.cpp.o.requires
+test/CMakeFiles/client.dir/requires: test/CMakeFiles/client.dir/message.pb.cc.o.requires
 
 .PHONY : test/CMakeFiles/client.dir/requires
 
 test/CMakeFiles/client.dir/clean:
-	cd /mnt/hgfs/workstation/LBS-2/build/test && $(CMAKE_COMMAND) -P CMakeFiles/client.dir/cmake_clean.cmake
+	cd /mnt/hgfs/workstation/LBS/build/test && $(CMAKE_COMMAND) -P CMakeFiles/client.dir/cmake_clean.cmake
 .PHONY : test/CMakeFiles/client.dir/clean
 
 test/CMakeFiles/client.dir/depend:
-	cd /mnt/hgfs/workstation/LBS-2/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/hgfs/workstation/LBS-2 /mnt/hgfs/workstation/LBS-2/test /mnt/hgfs/workstation/LBS-2/build /mnt/hgfs/workstation/LBS-2/build/test /mnt/hgfs/workstation/LBS-2/build/test/CMakeFiles/client.dir/DependInfo.cmake --color=$(COLOR)
+	cd /mnt/hgfs/workstation/LBS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /mnt/hgfs/workstation/LBS /mnt/hgfs/workstation/LBS/test /mnt/hgfs/workstation/LBS/build /mnt/hgfs/workstation/LBS/build/test /mnt/hgfs/workstation/LBS/build/test/CMakeFiles/client.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/CMakeFiles/client.dir/depend
 

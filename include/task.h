@@ -1,26 +1,27 @@
 #ifndef TASK_H_
 #define TASK_H_
+#include <assert.h>
 #include <string>
 #include <string.h>
+
+#include "until.h"
 /*
-* 任务
+* 工作线程入口
+* remember keep thread safe
 */
 
 namespace lbs {
 class Task
 {
 public:
-	Task(int e, int s) : epollfd_(e), sockfd_(s) {}
+	Task(myEvent* ev) 
+	    : ev_(ev) {}
     
     /*读取消息， 调用业务逻辑*/
     void work();
-    virtual void OnMessage(const char* buf, std::string& res) 
-    { 
-    	res = std::string(buf, strlen(buf));
-    }
-
-	int epollfd_ = -1;
-	int sockfd_ = -1;
+    virtual void OnMessage(const std::string& req, std::string& res);
+    
+	myEvent *ev_ = nullptr;
 };
 } //end of namespace lbs
 

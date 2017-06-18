@@ -1,8 +1,9 @@
-﻿set(SOURCE_FILES
+set(SOURCE_FILES
              lbsserver.cpp
              task.cpp
              clientinfo.cpp
              until.cpp
+             message.pb.cc
              )
 
 add_library(lbs_framework STATIC ${SOURCE_FILES})

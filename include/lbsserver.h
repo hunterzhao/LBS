@@ -1,12 +1,14 @@
-﻿#ifndef LBSSERVER
+#ifndef LBSSERVER
 #define LBSSERVER
 #include <netinet/in.h>
-
 #include <memory>
+
 #include "threadpool.h"
 #include "task.h"
+#include "until.h"
 
-#define WRITE_BUFF_SIZE 2048
+#define WAITCONN 500
+#define MAX_EVENT_NUMBER 500
 
 namespace lbs {
 class LBSServer {
@@ -33,14 +35,11 @@ private:
 
     struct sockaddr_in address_;
 
-    // /* 读缓冲区 */
-    // char readbuf_[READ_BUFF_SIZE];
-
-    // /* 写缓冲区 */
-    // char writebuf_[WRITE_BUFF_SIZE];
-
     /* 线程池 */
-    std::shared_ptr<ThreadPool<Task>> thread_pool_ptr_;
+    std::unique_ptr<ThreadPool<Task>> thread_pool_ptr_;
+    
+    /* event 池*/
+    myEvent events_pool_[MAX_EVENT_NUMBER + 1];
 };
 }
 
