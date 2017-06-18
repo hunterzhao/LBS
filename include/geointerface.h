@@ -5,6 +5,11 @@
 
 #include "kdtree.h"
 #include "until.h"
+
+/*
+*  geo算法库服务接口
+*/
+
 namespace geo
 {
 class GeoInterface

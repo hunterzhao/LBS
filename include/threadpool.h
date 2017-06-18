@@ -10,11 +10,15 @@
 #include <condition_variable>
 #include <queue>
 
+#include <glog/logging.h>
+
 #include "nocopy.h"
 /*
 *  这是一个线程池
 */
 namespace lbs {
+
+typedef std::function<void(const std::string& req, std::string& res)> JobFuncType;
 
 template<typename T>
 class ThreadPool : public NonCopyable
@@ -41,7 +45,7 @@ public:
 	~ThreadPool()
     {
         threads_array_.clear();
-        printf("thread pool dry\n");
+        LOG(INFO) << "thread pool dry";
         stop_ = true;
     }
 
@@ -59,6 +63,11 @@ public:
         return true;
     }
     
+    void setJob(JobFuncType job)
+    {
+        job_ = job;
+    }
+
 private:
 
 	/*工作线程运行函数，不断的从工作队列中取出任务并执行*/
@@ -74,13 +83,13 @@ private:
     {
         while (!stop_)
         {
-            printf("线程等待中。。。\n");
+            LOG(INFO) << "oen thread wait";
             std::unique_lock<std::mutex> lk(mtx_);
             data_cond_.wait(lk, [this] {return !work_queue_.empty();});
-            printf("线程接单了\n");
+            LOG(INFO) << "one thread work";
             T request = work_queue_.front();
             work_queue_.pop();
-            request.work();
+            request.work(job_);
         }
     }
 
@@ -92,6 +101,7 @@ private:
     bool stop_;  /*是否结束线程*/
     mutable std::mutex mtx_; /*互斥量*/
     std::condition_variable data_cond_; /*条件变量*/
+    JobFuncType job_;/*业务逻辑*/
 };
 
 } //end of namespace lbs

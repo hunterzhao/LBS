@@ -1,0 +1,4 @@
+Log file created at: 2017/06/18 21:20:22
+Running on machine: ubuntu
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+E0618 21:20:22.264289 68286 until.cpp:71] peer close

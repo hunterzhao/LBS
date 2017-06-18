@@ -1,20 +1,41 @@
+## 执行
+1. mkdir build && cd build
+2. cmake .. && make
+3. cd .. && cd bin
+4. bin目录下有server，和测试用的client
+
+## 功能
+1. 可以添加坐标点
+2. 给一个坐标和范围可以查询周围坐标点
+
+## 编译运行
+1. 没有内存错误 
+2. 线程安全  
+
+## 结构
+1. 业务 网络 近邻算法 三个部分分离
+2. 考虑到目前业务比较简单，所以采用直白的注入方式
+3. 代码目录
+- /geo geo算法库
+- /dep 依赖 gmock gtest kdtree protobuf
+- /include 头文件
+- /lib 库
+- /src 网络
+- /test server client unittest 入口
+- /bin 生成文件目录
+- /log 存放日志目录
+
 业务分析
 1. 添加位置的请求数量要远远多于计算位置
 2. 计算是耗时远远多于简单添加位置
-3. 连接会比较多，IO较大
-4. 业务层如何与网络层分割
+3. 连接会比较多，IO负担较大
 
 技术分析
-1. TCP不需要维持长连接
-2. EPOLLET EPOLLLT 的选择？
-3. oneshot 的选择？多线程中，选择oneshot
-4. 传参方式与检查
-5. 粘包发生的原因
-6. GeoHash
+1. EPOLLET EPOLLLT 的选择？选择ET模式
+2. oneshot 的选择？多线程中，选择oneshot
+3. 传参方式与检查
+4. 粘包解决与测试：
+5. GeoHash
 
-
-bug:
-1. epoll 线程安全么？
-2. epoll_Wait后，得到的fd是Bad file descriptor,原因，epoll_add时要考虑顺序
-3. 一些固定的接口必须通过原生指针传递资源，但是我想用智能指针管理这些资源，应该怎么做比较优雅呢
-4. 文件描述符的关闭时机 myEvent的释放时机, server终止，部分myEvent内存泄漏
+TODO
+1. geohash 

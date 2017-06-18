@@ -16,6 +16,21 @@
 * common function
 */
 /*************************方法*********************************/
+void initGlog(const char* arg)
+{
+    google::InitGoogleLogging(arg);
+    std::string home = "../log/";
+    std::string info_log = home + "info_";   
+    google::SetLogDestination(google::INFO, info_log.c_str());   
+    std::string warning_log = home + "warning_";   
+    google::SetLogDestination(google::WARNING, warning_log.c_str());   
+    std::string error_log = home + "error_";   
+    google::SetLogDestination(google::ERROR, error_log.c_str());   
+    std::string fatal_log = home + "fatal_";   
+    google::SetLogDestination(google::FATAL, fatal_log.c_str());   
+    FLAGS_alsologtostderr = 1;
+    FLAGS_colorlogtostderr = 1;
+}
 
 int writen(int fd, void *buff, size_t count)
 {
@@ -30,7 +45,7 @@ int writen(int fd, void *buff, size_t count)
     
     if (nwrite == -1 && errno != EAGAIN)
     {
-       perror("write error");
+       LOG(ERROR) << "write failed";
        exit(-1);
     }
     
@@ -53,13 +68,13 @@ int readn(int fd, void *buff, size_t count)
     
     if (0 == nread) 
     {
-        printf("peer close\n");
+        LOG(ERROR) << "peer close";
         throw 1;
     }
 
     if (-1 == nread && errno != EAGAIN) 
     {
-        perror("read error");
+        LOG(ERROR) << "read failed";
         exit(-1);
     }
     /* 接受数据over 指定长度数据收完或者缓冲区为空了*/
@@ -71,19 +86,19 @@ void setNonBlock(int sock)
 	int opts = ::fcntl(sock, F_GETFL);
 	if (opts < 0)
 	{
-		perror("fcntl sock GETFL");
+        LOG(ERROR) << "fcntl sock failed";
 		exit(1);
 	}
 	opts = opts | O_NONBLOCK;
 	if (::fcntl(sock, F_SETFL, opts) < 0)
 	{
-		perror("fcntl(sock, SETFL, opts)");
+		LOG(ERROR) << "fcntl sock failed";
 		exit(1);
 	}
 }
 
 
-void resetOneShot( int epollfd, int fd )
+void resetOneShot(int epollfd, int fd)
 {
 	epoll_event event;
 	event.data.fd = fd;
@@ -96,7 +111,7 @@ void removeFd(int epollfd, int fd)
     ::epoll_ctl(epollfd, EPOLL_CTL_DEL, fd, 0);
 }
 
-void addFd(int epollfd, int events, myEvent *ev, bool one_shot)  
+void addFd(int epollfd, int events, MyEvent *ev, bool one_shot)  
 {  
     if ( -1 == epollfd) 
     {
@@ -121,26 +136,24 @@ void addFd(int epollfd, int events, myEvent *ev, bool one_shot)
     setNonBlock(ev->fd); //ET
     if(::epoll_ctl(epollfd, op, ev->fd, &epv) < 0) 
     { 
-        printf("Event Add failed[fd=%d], evnets[%d], epollfd[%d]\n", ev->fd, events, epollfd);  
-        perror("ctl error");
+        LOG(ERROR) << "ctl error";
     } 
 } 
 
-void sendData(int fd, struct myEvent* ev)  
+void sendData(int fd, struct MyEvent* ev)  
 {  
     /* 缓冲区可写 */
     
     /* 如果是第一个消息包，添加发送消息长度 */
     if (!ev->slice)
-    {
-       uint32_t data_full_Len = ::htonl(ev->len);
-       int left = writen(fd, &data_full_Len, sizeof(uint32_t));
-       assert(left == 0);
+    {             
+        uint32_t data_full_Len = ::htonl(ev->len); 
+        int left = writen(fd, &data_full_Len, sizeof(uint32_t));
+        assert(left == 0);
     }
-
     /* 发送消息本体 */
     int left = writen(fd, ev->buff + ev->index, ev->len);
-    
+
     /* 还有数据？缓冲区满了？等待下次发吧*/
     if (left > 0) 
     {
@@ -148,15 +161,15 @@ void sendData(int fd, struct myEvent* ev)
         ev->slice = true;
         ev->index += left;
         addFd(ev->epollfd, EVENT_OUT, ev, true);
-        printf("发生多次发送");
+        LOG(INFO) << "send multi times";
         return; 
     }
     /* 消息发送完罗*/
     assert(left == 0);
 
     /* 等待下一波到来数据 */
+
     ev->call_back = nullptr;
     ev->resetData();
-
     addFd(ev->epollfd, EVENT_IN, ev, true);
 }  

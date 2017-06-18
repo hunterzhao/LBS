@@ -1,7 +1,6 @@
 set(SOURCE_FILES
              lbsserver.cpp
              task.cpp
-             clientinfo.cpp
              until.cpp
              message.pb.cc
              )

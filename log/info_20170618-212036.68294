@@ -1,0 +1,30 @@
+Log file created at: 2017/06/18 21:20:36
+Running on machine: ubuntu
+Log line format: [IWEF]mmdd hh:mm:ss.uuuuuu threadid file:line] msg
+I0618 21:20:36.974898 68294 lbsserver.cpp:46] server init over
+I0618 21:20:36.981169 68296 threadpool.h:86] oen thread wait
+I0618 21:20:36.981242 68297 threadpool.h:86] oen thread wait
+I0618 21:20:37.047657 68294 lbsserver.cpp:65] server running
+I0618 21:20:36.981346 68298 threadpool.h:86] oen thread wait
+I0618 21:20:36.980975 68295 threadpool.h:86] oen thread wait
+I0618 21:20:38.977612 68296 threadpool.h:89] one thread work
+I0618 21:20:39.012145 68296 server.cpp:36] insert one pos ok
+I0618 21:20:39.027664 68296 threadpool.h:86] oen thread wait
+I0618 21:20:39.029510 68294 lbsserver.cpp:119] recv multi times
+I0618 21:20:39.030374 68297 threadpool.h:89] one thread work
+I0618 21:20:39.031153 68297 server.cpp:36] insert one pos ok
+I0618 21:20:39.031396 68297 threadpool.h:86] oen thread wait
+I0618 21:20:39.075639 68294 lbsserver.cpp:119] recv multi times
+I0618 21:20:39.075846 68294 lbsserver.cpp:119] recv multi times
+I0618 21:20:39.076035 68298 threadpool.h:89] one thread work
+I0618 21:20:39.076349 68298 server.cpp:36] insert one pos ok
+I0618 21:20:39.076592 68298 threadpool.h:86] oen thread wait
+I0618 21:20:39.119585 68294 lbsserver.cpp:119] recv multi times
+I0618 21:20:39.119832 68295 threadpool.h:89] one thread work
+I0618 21:20:39.120024 68295 server.cpp:36] insert one pos ok
+I0618 21:20:39.120200 68295 threadpool.h:86] oen thread wait
+I0618 21:20:39.163719 68294 lbsserver.cpp:119] recv multi times
+I0618 21:20:39.163987 68296 threadpool.h:89] one thread work
+I0618 21:20:39.183037 68296 server.cpp:59] search one pos ok
+I0618 21:20:39.199057 68296 threadpool.h:86] oen thread wait
+E0618 21:20:39.244110 68294 until.cpp:71] peer close

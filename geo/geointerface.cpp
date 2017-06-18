@@ -9,7 +9,7 @@ std::mutex GeoInterface::mtx_;
 int GeoInterface::insertPos(const Position& c)
 {
     std::lock_guard<std::mutex> lck(mtx_);
-    assert(kd_insert3(ptree_, c.x_, c.y_, 0.0f, nullptr) == 0);
+    assert(kd_insert3(ptree_, c.x, c.y, 0.0f, nullptr) == 0);
     return 1;
 }
 
@@ -18,7 +18,7 @@ int GeoInterface::insertPos(const std::vector<Position>& pos)
     std::lock_guard<std::mutex> lck(mtx_);
     for (auto c : pos) 
     {
-       assert(kd_insert3(ptree_, c.x_, c.y_, 0.0f, nullptr) == 0);
+       assert(kd_insert3(ptree_, c.x, c.y, 0.0f, nullptr) == 0);
     }
     return 1;
 }
@@ -26,7 +26,7 @@ int GeoInterface::insertPos(const std::vector<Position>& pos)
 int GeoInterface::searchPos(const Position& c, const double radius, 
               std::vector<Position>& ans) const
 {
-    double pt[3] = { c.x_, c.y_, 0.0f };
+    double pt[3] = { c.x, c.y, 0.0f };
     struct kdres *results = kd_nearest_range(ptree_, pt, radius);
     
     /*没有满足调节的坐标*/

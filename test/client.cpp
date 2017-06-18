@@ -80,7 +80,7 @@ void testReqAdd(int fd, double x, double y)
 {
     lbs::ReqProto req; 
    
-    req.set_type(2);  //message type 2
+    req.set_type(0);  //message type 2
     req.set_id(1);  //message client id 统一为 1
 
     lbs::AddReqProto* add = new lbs::AddReqProto();

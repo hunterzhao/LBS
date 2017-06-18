@@ -14,14 +14,13 @@ namespace lbs {
 class Task
 {
 public:
-	Task(myEvent* ev) 
+	Task(MyEvent* ev) 
 	    : ev_(ev) {}
     
     /*读取消息， 调用业务逻辑*/
-    void work();
-    virtual void OnMessage(const std::string& req, std::string& res);
+    void work(JobFuncType job_);
     
-	myEvent *ev_ = nullptr;
+	MyEvent *ev_ = nullptr;
 };
 } //end of namespace lbs
 

@@ -1,1 +1,0 @@
-/usr/bin/c++    -g -pthread -std=c++11 -Wall -O0   CMakeFiles/client.dir/client.cpp.o CMakeFiles/client.dir/message.pb.cc.o  -o ../../bin/client  -L/mnt/hgfs/workstation/LBS/lib -rdynamic -lprotobuf -Wl,-rpath,/mnt/hgfs/workstation/LBS/lib 

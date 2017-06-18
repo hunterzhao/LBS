@@ -1,1 +1,0 @@
-/usr/bin/c++    -g -pthread -std=c++11 -Wall -O0   CMakeFiles/server.dir/server.cpp.o  -o ../../bin/server  -L/mnt/hgfs/workstation/LBS/lib -rdynamic ../../lib/liblbs_framework.a -lprotobuf ../../lib/libgeo.a -lkdtree -Wl,-rpath,/mnt/hgfs/workstation/LBS/lib 

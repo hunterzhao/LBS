@@ -20,8 +20,11 @@ public:
 	 /* 初始化新接受的连接*/
     void init(int port);
 
-	/*epoll 主循环*/
+	/* epoll 主循环*/
 	int run();
+    
+    /* 注入业务逻辑接口 */
+    void setJob(JobFuncType job);
 
 private:	
 /*所有的socket事件都注册到同一个epoll上*/
@@ -36,10 +39,10 @@ private:
     struct sockaddr_in address_;
 
     /* 线程池 */
-    std::unique_ptr<ThreadPool<Task>> thread_pool_ptr_;
+    std::shared_ptr<ThreadPool<Task>> thread_pool_ptr_;
     
     /* event 池*/
-    myEvent events_pool_[MAX_EVENT_NUMBER + 1];
+    MyEvent events_pool_[MAX_EVENT_NUMBER + 1];
 };
 }
 
